@@ -1,8 +1,13 @@
 ﻿using LINQ_1;
+using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data.SqlTypes;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Xml;
 using static LINQ_1.ListGenerator;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Linq_2
  
@@ -427,6 +432,31 @@ namespace Linq_2
             //}
 
 
+
+            #endregion
+
+
+
+
+            #region Quantifiers
+
+            // 1.Determine if any of the words in dictionary_english.txt(Read dictionary_english.txt into Array of String First) contain the substring 'ei'.
+
+
+            //string path = "dictionary_english.txt";
+
+            //string[] words = File.ReadAllLines(path);
+
+            //var word = words.Any(w => w.Contains("ei"));
+
+            //Console.WriteLine(word);
+
+
+            //2.Return a grouped list of products only for categories that have at least one product that is out of stock.
+
+            //var grouplist= Products.GroupBy(x=>x.Category)
+            //    .Select(c=>c.Any(x=>x.UnitsInStock==0)).ToList();
+         
 
             #endregion
         }
