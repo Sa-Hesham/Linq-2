@@ -1,4 +1,5 @@
 ﻿using LINQ_1;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,6 +7,7 @@ using System.Data.SqlTypes;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Xml;
+using System.Xml.Linq;
 using static LINQ_1.ListGenerator;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -456,7 +458,77 @@ namespace Linq_2
 
             //var grouplist= Products.GroupBy(x=>x.Category)
             //    .Select(c=>c.Any(x=>x.UnitsInStock==0)).ToList();
-         
+
+
+            #endregion
+
+
+
+
+            #region  Partitioning Operators
+
+            //1.Get the first 3 orders from customers in Washington
+
+            //var first = (from c in CustomerList
+            //            from o in c.Orders
+            //            where c.City == "Washington"
+            //            select o).Take(3);
+            //foreach (var item in first) {
+
+            //    Console.WriteLine($"{item.OrderID} {item.OrderDate}");
+            //}
+
+            // 2.Get all but the first 2 orders from customers in Washington.
+
+            //var first = CustomerList.Where(x=>x.City=="Washington").SelectMany(x=>x.Orders).Take(2).ToList();
+            //foreach (var x in first) {
+
+            //    Console.WriteLine(x);
+
+            //}
+
+            // 3.Return elements starting from the beginning of the array until a number is hit that is less than its position in the array.
+
+
+            //int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+
+            //var elements = numbers.TakeWhile((n, index) => n >= index).ToList();   
+
+            //    foreach (var element in elements) {
+
+            //    Console.WriteLine(element);
+
+            //}
+
+
+            //4.Get the elements of the array starting from the first element divisible by 3.
+            //    int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+
+
+
+            //var result = numbers
+            //    .SkipWhile(n => n % 3 != 0);
+
+            //foreach (var n in result)
+            //{
+            //    Console.WriteLine(n);
+            //}
+
+
+            //5.Get the elements of the array starting from the first element less than its position.
+            //int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+            //var result = numbers
+            // .Select((n, index) => new { n, index })  
+            //.SkipWhile(x => x.n >= x.index)         
+            //.Select(x => x.n)                         
+            //    .ToList();
+
+            //foreach (var n in result)
+            //{
+            //    Console.WriteLine(n);
+            //}
+
+
 
             #endregion
         }
