@@ -1,4 +1,7 @@
 ﻿using LINQ_1;
+using System.Collections.Generic;
+using System.Threading;
+using System.Xml;
 using static LINQ_1.ListGenerator;
 
 namespace Linq_2
@@ -363,6 +366,66 @@ namespace Linq_2
             //{
             //    Console.WriteLine($"Category: {product.Category}, Product: {product.ProductName}, Price: {product.UnitPrice:C}");
             //}
+
+
+            #endregion
+
+
+
+
+            #region  Set Operators
+            // Find the unique Category names from Product List
+            //var uniqueCategories = Products
+            //    .Select(p => p.Category)
+            //    .Distinct();               
+
+            //foreach (var category in uniqueCategories)
+            //{
+            //    Console.WriteLine(category);
+            //}
+
+
+            //2. Produce a Sequence containing the unique first letter from both product and customer names.
+            //var produce= Products.Select(x => x.ProductName[0]).Concat(CustomerList.Select(m => m.CustomerName[0])).Distinct();
+            //foreach (var item in produce) {
+
+            //    Console.WriteLine(item);
+
+            //}
+
+
+            //3.Create one sequence that contains the common first letter from both product and customer names.
+
+            //var sequance = Products.Select(x => x.ProductName[0]).Intersect(CustomerList.Select(x => x.CustomerName[0]));
+            //foreach (var item in sequance) {
+            //    Console.WriteLine(item);
+
+            //}
+
+
+            //4.Create one sequence that contains the first letters of product names that are not also first letters of customer names.
+
+            //var seq= Products.Select(x => x.ProductName[0]).Except(CustomerList.Select(c=>c.CustomerName[0]));
+            //foreach (var item in seq) {
+            //    Console.WriteLine(item);
+
+            //}
+
+            //5.Create one sequence that contains the last Three Characters in each name of all customers and products, including any duplicates
+            //var sequ = Products
+            //    .Where(x => x.ProductName.Length >= 3) 
+            //    .Select(x => x.ProductName.Substring(x.ProductName.Length - 3)) 
+            //    .Concat(
+            //        CustomerList
+            //            .Where(c => c.CustomerName.Length >= 3)
+            //            .Select(c => c.CustomerName.Substring(c.CustomerName.Length - 3))
+            //    );
+
+            //foreach (var s in sequ)
+            //{
+            //    Console.WriteLine(s);
+            //}
+
 
 
             #endregion
